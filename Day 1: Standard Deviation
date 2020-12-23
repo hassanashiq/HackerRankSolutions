@@ -1,0 +1,19 @@
+#Here is the actual link to the HackerRank Problem
+#https://www.hackerrank.com/challenges/s10-standard-deviation/problem
+
+
+
+#Solution is below
+
+N = int(input()) 
+
+x = list(map(int, input().split())) 
+
+means=sum(x)/len(x)
+
+sumed=0
+for i in x:
+    test=(( means-i)**2) 
+    sumed=sumed+test
+
+print( '{:.1f}'.format(( sumed/N )**0.5 ))
